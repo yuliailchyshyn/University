@@ -17,10 +17,6 @@ CREATE TABLE [dbo].[Авіаперевізники](
 GO
 
 
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[Замовлення](
 	[Ідентифікаційний код клієнта] [int] NOT NULL,
 	[Код туру] [int] NOT NULL,
@@ -38,10 +34,6 @@ CREATE TABLE [dbo].[Замовлення](
 GO
 
 
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[Клієнти](
 	[Ідентифікаційний код клієнта] [int] NOT NULL,
 	[Прізвище] [nvarchar](50) NOT NULL,
@@ -71,10 +63,6 @@ CREATE TABLE [dbo].[Напрямки](
 
 GO
 
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[Тури](
 	[Код туру] [int] NOT NULL,
 	[Код напрямку] [int] NOT NULL,
@@ -108,5 +96,3 @@ GO
 ALTER TABLE [dbo].[Тури] CHECK CONSTRAINT [FK_Тури_Напрямки]
 GO
 
-ALTER DATABASE [Туристична агенція] SET  READ_WRITE 
-GO
